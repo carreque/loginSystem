@@ -1,0 +1,3 @@
+- We are going to follow a TDD approach. You will write the test and I will write the code to make the tests pass.
+- You should not do any commit nor push
+- Before jumping to the next phase, you should check that all tests are green.

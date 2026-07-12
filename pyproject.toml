@@ -1,0 +1,11 @@
+[project]
+name = "login-system"
+version = "0.1.0"
+description = "Centralized authentication + per-profile authorization for an employee portal (AWS)."
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+# Lambda source lives under src/; put it on sys.path so tests can import handlers.
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,3 @@
+# Runtime dependencies for the Lambda functions (Python 3.12).
+# boto3 / botocore are provided by the AWS Lambda runtime and are intentionally omitted.
+PyJWT[crypto]==2.9.0

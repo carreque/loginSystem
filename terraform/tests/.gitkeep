@@ -1,0 +1,3 @@
+# Placeholder. Phase 9 adds native tests here:
+#   cognito.tftest.hcl  s3.tftest.hcl  apigateway.tftest.hcl  iam.tftest.hcl
+# Each uses `command = plan` + assert blocks (no apply, no AWS calls).

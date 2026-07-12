@@ -1,0 +1,19 @@
+# Copy to terraform.tfvars and adjust for your environment.
+# All values below are optional overrides — every variable has a sensible default.
+
+aws_region   = "us-east-1"
+project_name = "employee-portal-auth"
+environment  = "dev"
+
+# Front-end portal that calls the API (CORS + OAuth).
+portal_origin = "http://localhost:3000"
+callback_urls = ["http://localhost:3000/callback"]
+logout_urls   = ["http://localhost:3000/logout"]
+
+log_level          = "INFO"
+log_retention_days = 30
+
+access_token_validity_minutes = 60
+
+api_throttle_rate_limit  = 50
+api_throttle_burst_limit = 100
