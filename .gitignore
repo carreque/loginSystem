@@ -16,3 +16,8 @@ crash.log
 # Build artifacts
 *.zip
 dist/
+
+# Docs — local-only
+docs/implementationLoginSystem.md
+docs/Sessions/
+docs/Vulnerabilities/
