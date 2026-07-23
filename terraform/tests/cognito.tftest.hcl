@@ -1,4 +1,14 @@
-mock_provider "aws" {}
+# IAM roles/bucket policies in the root config render assume/policy JSON from
+# aws_iam_policy_document; under a bare mock that JSON is invalid and fails
+# provider validation. This test asserts only on Cognito, so give those docs a
+# valid empty-policy default. (Policy *content* is checked in iam.tftest.hcl.)
+mock_provider "aws" {
+  mock_data "aws_iam_policy_document" {
+    defaults = {
+      json = "{\"Version\":\"2012-10-17\",\"Statement\":[]}"
+    }
+  }
+}
 
 run "cognito_hardening" {
   command = plan
