@@ -16,6 +16,7 @@ crash.log
 # Build artifacts
 *.zip
 dist/
+terraform/build/
 
 # Docs — local-only
 docs/implementationLoginSystem.md
