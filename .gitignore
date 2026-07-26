@@ -20,5 +20,6 @@ terraform/build/
 
 # Docs — local-only
 docs/implementationLoginSystem.md
+docs/hardeningStatusLoginSystem.md
 docs/Sessions/
 docs/Vulnerabilities/
