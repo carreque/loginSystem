@@ -3,3 +3,6 @@ pytest>=8.0
 moto[cognitoidp,s3]>=5.0
 PyJWT[crypto]==2.9.0
 boto3>=1.34
+requests>=2.32   # live smoke tests (tests/live) only
+pycognito>=2024.5.1  # Cognito SRP for scripts/live_tokens.py
+pyotp>=2.9       # TOTP enrolment for the MFA-enforced pool

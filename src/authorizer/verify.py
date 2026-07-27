@@ -3,8 +3,8 @@ import json
 import jwt
 import re
 from jwt.algorithms import RSAAlgorithm
-from exceptions.tokenError import TokenError
-from utils.errors import known_errors
+from common.tokenError import TokenError
+from common.errors import known_errors
 
 _MATRIX = [
     ("GET", re.compile(r"^resource/[^/]+$"), frozenset({"empleado", "supervisor", "admin"})),

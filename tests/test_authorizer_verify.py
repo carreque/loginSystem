@@ -2,7 +2,7 @@
 import pytest
 
 import verify
-from exceptions.tokenError import TokenError
+from common.tokenError import TokenError
 
 def test_valid_access_token_passes(make_token, jwks, issuer, audience):
     token = make_token(groups=["empleado"])

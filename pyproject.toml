@@ -7,7 +7,10 @@ requires-python = ">=3.12"
 [tool.pytest.ini_options]
 # src/ for `from common.http import ...`; src/authorizer/ so the authorizer's
 # handler.py and tests can `import verify` (they sit beside each other at the
-# Lambda deployment root).
-pythonpath = ["src", "src/authorizer"]
+# Lambda deployment root). scripts/ so the test harness itself is testable.
+pythonpath = ["src", "src/authorizer", "scripts"]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "live: smoke tests against a deployed AWS stack; skipped unless LIVE_* env vars are set",
+]

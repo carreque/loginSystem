@@ -13,10 +13,33 @@ terraform/.terraform.lock.hcl
 terraform.tfvars
 crash.log
 
+# Live smoke-test credentials + tokens (scripts/live_tokens.py)
+.live-users.json
+.live-tokens.ps1
+.live-tokens.sh
+
 # Build artifacts
 *.zip
 dist/
 terraform/build/
+
+# Screen recordings / screenshots of the live stack — these show real tokens,
+# pool ids, API ids and the account number on screen. Also far too large for git.
+*.mp4
+*.mov
+*.webm
+screenshots/
+
+# Runbook scratch files (§4 creates demo.txt; §6 examples may create *.json bodies)
+demo.txt
+
+# Credentials that should never appear here, even by accident
+*.pem
+*.key
+*.p12
+.env
+.env.*
+!.env.example
 
 # Docs — local-only
 docs/implementationLoginSystem.md

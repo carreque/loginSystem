@@ -5,7 +5,7 @@ User Pool JWKS (cached in module scope, refreshed once on an unknown kid), then
 applies per-route RBAC. Any error path returns an explicit Deny policy.
 """
 from __future__ import annotations
-from exceptions.tokenError import TokenError
+from common.tokenError import TokenError
 import json
 import logging
 import os
